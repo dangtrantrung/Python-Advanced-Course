@@ -17,3 +17,6 @@ print(new_dict)
 print(new_dict['hobbies'])
 for hb in new_dict['hobbies']:
     print(hb)
+
+    assert dict==new_dict
+    print('test assert ok')
