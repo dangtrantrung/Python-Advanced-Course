@@ -1,0 +1,10 @@
+{
+    "name": "Trung",
+    "age": 40,
+    "hobbies": [
+        "sleeping",
+        "ping pong",
+        "dev",
+        "eating"
+    ]
+}

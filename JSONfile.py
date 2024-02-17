@@ -21,5 +21,13 @@ for hb in new_dict['hobbies']:
     assert dict==new_dict
     print('test assert ok')
 
+# write python obj to json file
 with open('save.json','w') as f:
-    json.dump()
+    json.dump(dict, f,indent=4)
+# read json to python obj
+
+with open('save.json') as f:
+    mydict=json.load(f)
+
+print(mydict)
+print(type(mydict))
