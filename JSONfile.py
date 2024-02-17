@@ -20,3 +20,6 @@ for hb in new_dict['hobbies']:
 
     assert dict==new_dict
     print('test assert ok')
+
+with open('save.json','w') as f:
+    json.dump()
