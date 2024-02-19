@@ -1,0 +1,6 @@
+berili 4 9.012
+magie 12 24.305
+canxi 20 20.078
+stronti 38 87,62
+bari 56 137.327 
+radium 88 226
