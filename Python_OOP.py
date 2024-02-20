@@ -12,6 +12,8 @@ class SuperMan:
     def Hello (self):
         print("My power is: ", self.power)
         return "Hello, My name is: " + self.Name
+    def transform(self):
+        print(f'SuperMan: {self.Name} will transform')
     # variable, attribute of class
     power=50
     #class method
@@ -20,8 +22,11 @@ class SuperMan:
         ''' pass '''
         cls.power=power
     @staticmethod
-    def staticmethod(cls):
-        pass
+    def staticmethod_SuperMan_Transform():
+        ''' pass '''
+        print('SuperMan will transform')
+
+
     @classmethod
     def from_string(cls,s):
         lst=s.split('-')
@@ -59,3 +64,9 @@ print(SuperMan.Hello(SuperMan_A))
 SuperMan_D=SuperMan.from_string('Tèo-Gun-Blue')
 print(SuperMan_D.id)
 print(SuperMan_D.Name)
+print(SuperMan_D.__dict__)
+SuperMan.staticmethod_SuperMan_Transform()
+SuperMan_A.transform()
+SuperMan_B.transform()
+SuperMan_C.transform()
+SuperMan_D.transform()
