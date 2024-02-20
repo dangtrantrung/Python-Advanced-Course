@@ -14,7 +14,21 @@ class SuperMan:
         return "Hello, My name is: " + self.Name
     # variable, attribute of class
     power=50
-    
+    #class method
+    @classmethod
+    def classmethod_update_power(cls,power):
+        ''' pass '''
+        cls.power=power
+    @staticmethod
+    def staticmethod(cls):
+        pass
+    @classmethod
+    def from_string(cls,s):
+        lst=s.split('-')
+        new_lst=[st.strip() for st in lst]
+        Name,Weapon,Color=new_lst
+        return cls(Name,Weapon,Color)
+
 SuperMan_A=SuperMan("Trung","Sword","Red")
 SuperMan_B=SuperMan("Trung 1","Sword","Red")
 SuperMan_C=SuperMan("Trung 2","Sword","Red")
@@ -33,6 +47,7 @@ print(SuperMan_A.power)
 print(SuperMan.power)
 #change attribute of class, all instance will update attribute value,...# c#:static variable
 SuperMan.power=40
+SuperMan.classmethod_update_power(30)
 print(SuperMan_A.power)
 print(SuperMan.power)
 print(SuperMan_A.id)
@@ -40,3 +55,7 @@ print(SuperMan_B.id)
 print(SuperMan_C.id)
 print(SuperMan_A.Hello())
 print(SuperMan.Hello(SuperMan_A))
+
+SuperMan_D=SuperMan.from_string('Tèo-Gun-Blue')
+print(SuperMan_D.id)
+print(SuperMan_D.Name)
